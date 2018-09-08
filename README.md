@@ -1,5 +1,5 @@
 
-# Tensorflow Image Summarizer
+# Tensorflow Image Objects Summarizer
 
 We use the original TensorFlow Object Detection API [link](https://github.com/tensorflow/models/tree/master/research/object_detection) to summarize images for better retrieval during natural disasters.
 

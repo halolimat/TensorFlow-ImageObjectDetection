@@ -15,15 +15,14 @@ from io import BytesIO
 import json
 
 # This is needed since the notebook is stored in the object_detection folder.
-#sys.path.append("..")
-from utils import ops as utils_ops
+from object_detection.utils import ops as utils_ops
 
 if tf.__version__ < '1.4.0':
   raise ImportError('Please upgrade your tensorflow installation to v1.4.* or later!')
 
-from utils import label_map_util
+from object_detection.utils import label_map_util
 
-from utils import visualization_utils as vis_util
+from object_detection.utils import visualization_utils as vis_util
 
 ############################################################################################
 
@@ -42,7 +41,7 @@ class ObjectDetector(object):
         PATH_TO_CKPT = MODEL_NAME + '/frozen_inference_graph.pb'
 
         # List of the strings that is used to add correct label for each box.
-        PATH_TO_LABELS = os.path.join('data', 'mscoco_label_map.pbtxt')
+        PATH_TO_LABELS = os.path.join('object_detection', 'data', 'mscoco_label_map.pbtxt')
 
         NUM_CLASSES = 90
 

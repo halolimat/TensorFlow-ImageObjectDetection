@@ -160,7 +160,7 @@ class ObjectDetector(object):
                         o = self.objects[self.category_index[v]["name"]]
                         objs[o]+=1
 
-            return json.dumps(objs)
+            return dict(objs)
 
         except: # erros due to wrong formatted images
             return {}
